@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "skipLibCheck": true, // 忽略库文件的类型检查
+    "noImplicitAny": false, // 允许隐式 any 类型
+    "allowJs": true, // 支持 JavaScript 文件
+    "checkJs": false // 禁止检查 JavaScript 文件
+  },
+  "exclude": [
+    "node_modules" // 只排除整个 node_modules 文件夹，不需要单独列出 copy-webpack-plugin
+  ],
+  "include": [
+    "src/**/*", // 确保包括 src 文件夹下的所有文件
+    "types/**/*" // 确保包括 types 文件夹下的所有类型定义文件
+  ]
+}
